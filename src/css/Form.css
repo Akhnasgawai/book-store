@@ -1,0 +1,33 @@
+.book{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+form div{
+    margin-bottom: 20px;
+}
+
+form div input{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #868686;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: #212229;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 7px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
