@@ -42,6 +42,15 @@ const DisplayTable = () => {
       setFilteredBooks(filteredBooks);
     };
 
+    const deleteBook = (index) => {
+      if (!window.confirm("Are you sure?")) return false;
+      const books = JSON.parse(localStorage.getItem("books"));
+      if (index >= 0 && index < books.length) {
+        const updatedBooks = books.filter((_, i) => i !== index);
+        localStorage.setItem('books', JSON.stringify(updatedBooks));
+      }
+    }
+
     return (
         <>
           <input type="text" id='search' value={searchTerm} onChange={handleSearch} placeholder="Search by Title / Author Name" />
@@ -52,6 +61,7 @@ const DisplayTable = () => {
                 <p><span style={{ fontWeight: 'bold' }}>Author Name:</span> <span id='author'>{book.author}</span></p>
                 <p><span style={{ fontWeight: 'bold' }}>Price:</span> <span id='amount'>{book.amount}</span></p>
                 <button onClick={() => openModal(index)}>Edit</button>
+                <button onClick={() => deleteBook(index)}>Delete</button>
               </div>
             ))}
             {isModalOpen && <Modal isOpen={isModalOpen} closeModal={closeModal} bookIndex={selectedBookIndex} book={filteredBooks[selectedBookIndex]} customComponent={<Form />}/>}

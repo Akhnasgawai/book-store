@@ -30,7 +30,7 @@ const Form = (props) => {
     if (functionMap.hasOwnProperty(props.btnName)) {
       const selectedFunction = functionMap[props.btnName];
       console.log(selectedFunction);
-      selectedFunction();
+      selectedFunction(e);
     }
   };
 
@@ -64,7 +64,7 @@ const Form = (props) => {
   };
 
   const updateBooks = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const updatedBook = {
       title: title,
       author: author,

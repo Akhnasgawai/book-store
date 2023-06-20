@@ -4,18 +4,7 @@ import './css/index.css';
 import App from './pages/App';
 import AddBook from './pages/AddBook';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
-
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <App />,
-//   },
-//   {
-//     path: 'add-book',
-//     element: <AddBook />,
-//   }
-// ])
+import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +15,7 @@ root.render(
         <Route exact path='/' element={<App />} />
         <Route exact path='/book-store' element={<App />} />
         <Route path='/addBook' element={<AddBook />} />
+        <Route path="*" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
