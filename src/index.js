@@ -24,6 +24,7 @@ root.render(
     <BrowserRouter basename="/">
       <Routes>
         <Route exact path='/' element={<App />} />
+        <Route exact path='/book-store' element={<App />} />
         <Route path='addBook' element={<AddBook />} />
       </Routes>
     </BrowserRouter>
