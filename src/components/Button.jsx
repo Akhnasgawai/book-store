@@ -6,7 +6,7 @@ const Button = () => {
     return (
         <>
             <div className='btnContainer'>
-                <Link to="addBook" className="btn">Add Book</Link>
+                <Link to="/addBook" className="btn">Add Book</Link>
             </div>
         </>
     )

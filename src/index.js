@@ -25,7 +25,7 @@ root.render(
       <Routes>
         <Route exact path='/' element={<App />} />
         <Route exact path='/book-store' element={<App />} />
-        <Route path='addBook' element={<AddBook />} />
+        <Route path='/addBook' element={<AddBook />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
